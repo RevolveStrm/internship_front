@@ -19,7 +19,8 @@ const DealsItems = () => {
         getData();
     }, []);
 
-    const StyledContainer = styled.div`
+    const StyledContainer = deals?.length ?
+        styled.div`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
@@ -31,11 +32,27 @@ const DealsItems = () => {
         justify-content: flex-start;
         align-items: center;
       }
+    ` :
+        styled.div`
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+    `;
+
+    const StyledWarning = styled.h1`
+      color: rgba(23, 34, 52, 1);
     `;
 
     return (
         <StyledContainer>
-            {deals?.length && deals.map(el => <DealsItem key={el.id} item={el}/>)}
+            {deals?.length ?
+                deals.map(el => <DealsItem key={el.id} item={el}/>) :
+                <StyledWarning>There are no open deals at this moment</StyledWarning>
+            }
         </StyledContainer>
     );
 };
