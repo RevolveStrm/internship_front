@@ -7,7 +7,7 @@ const DealsItems = () => {
 
     useEffect(() => {
         const getData = async () => {
-          const data: IDealItem[] | undefined = await fetch(`http://localhost:5000/api/deals`)
+          const data: IDealItem[] | undefined = await fetch(`https://internship-back.onrender.com/api/deals`)
               .then(res => res.json())
               .then(res => res)
               .catch(err => console.log(err));

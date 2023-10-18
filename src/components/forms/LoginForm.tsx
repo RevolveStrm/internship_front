@@ -101,7 +101,7 @@ const LoginForm = () => {
     const handleSubmit = async (e: any) => {
         e.preventDefault();
 
-        await axios.post('http://localhost:5000/api/auth/sign-in', {
+        await axios.post('https://internship-back.onrender.com/api/auth/sign-in', {
             email,
             password,
         })

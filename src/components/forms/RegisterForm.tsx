@@ -105,7 +105,7 @@ const RegisterForm = () => {
             return;
         }
 
-        await axios.post('http://localhost:5000/api/auth/sign-up', {
+        await axios.post('https://internship-back.onrender.com/api/auth/sign-up', {
             email,
             password,
         })
