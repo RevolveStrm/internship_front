@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {useNavigate} from "react-router-dom";
-import useAccessToken from "../utlis/hooks/useAccessToken";
+import useAccessToken from "../utils/hooks/useAccessToken";
 
 interface IHeaderProps {
     auth?: boolean
