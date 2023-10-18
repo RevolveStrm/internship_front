@@ -5,6 +5,7 @@ dist/
 ormconfig.json
 docker/data/
 .node_repl_history
+build
 
 # Logs
 logs
